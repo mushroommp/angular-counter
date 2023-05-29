@@ -1,0 +1,10 @@
+<div class="content" [ngClass]="{'red-bg': btnCount === 10}">
+    <h1>Content!</h1>
+    <div class="child">
+        <app-content-child 
+            class="childContainer"
+            [btnCount]="btnCount"
+            [addCount]="addCount"
+        ></app-content-child>
+    </div>
+</div>
