@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CounterService } from 'src/app/service/counter/counter.service';
+import { CounterService } from '../../service/counter/counter.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,15 +7,11 @@ import { CounterService } from 'src/app/service/counter/counter.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(
-    private countService: CounterService
-  ){
-
-  }
-  btnCount = 0
+  constructor(private countService: CounterService) {}
+  btnCount = 0;
 
   addCount = () => {
-    let count = this.countService.addCounter(this.btnCount)
-    this.btnCount = count
-  }
+    let count = this.countService.addCounter(this.btnCount);
+    this.btnCount = count;
+  };
 }
